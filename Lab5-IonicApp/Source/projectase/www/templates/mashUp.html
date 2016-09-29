@@ -1,0 +1,32 @@
+<ion-view title="MashUp" id="page4">
+    <ion-content padding="true" class="has-header"></ion-content>
+   <div class="bar bar-header bar-assertive">
+   <h1 class="title">Ionic App</h1><br>
+    </div><br>
+     <div class ="row">
+          <label class="item item-input" id="keyword">
+        <div class= "col"> <input type="text" placeholder="Enter the keyword" ng-model="formData.item"></div>
+         </label>
+     </div>
+    <button id="searchimg" class="button button-royal" ng-click="image()">Click Me!</button>
+    <div class="row">
+    <a ng-click="wallmart()"><img ng-src={{image}} border="10"/></a><br>
+    </div>
+    
+    
+        <h4>Product Description using Walmart API</h4>
+    
+    
+        <div class = "row">
+            <div class ="col">Name </div>
+            <div class ="col">ProductID </div>
+            <div class ="col">Price </div>
+        </div>
+    
+   <div class = "row">
+            <div class ="col">{{name2}}</div>
+            <div class ="col">{{id2}} </div>
+            <div class ="col">{{price2}} </div>
+        </div>
+        
+</ion-view>

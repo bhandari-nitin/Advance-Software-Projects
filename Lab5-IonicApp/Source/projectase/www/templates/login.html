@@ -1,0 +1,20 @@
+<ion-view title="Login" id="page1">
+    <ion-content padding="true" class="has-header">
+        <h1 id="login-heading1" style="color:#000000;">Ionic App</h1>
+        <form id="login-form5" class="list">
+            <label class="item item-input" >
+                <input type="text" placeholder="Enter Username/Email" ng-model="formData.username" >
+            </label>
+            <label class="item item-input" >
+                <input type="password" ng-model="formData.password" placeholder="Enter Password">
+            </label>
+        </form>
+        <button id="login" class="button button-positive  button-block"  ng-click="checkcredentials()">Login</button>
+        <form id="login-form6" class="list">
+            <label class="item item-input" id="login-textarea1">
+                <span class="input-label">Not Registered?</span><textarea placeholder=""></textarea>
+            </label>
+        </form>
+        <a ui-sref="signup" id="register" class="button button-positive  button-block">Register</a>
+    </ion-content>
+</ion-view>
