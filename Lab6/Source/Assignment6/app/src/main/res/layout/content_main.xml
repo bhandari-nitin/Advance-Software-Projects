@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nsb.assignment6.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/abc">
+
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="122dp"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded" />
+
+    <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Login1"
+            android:onClick="onClickOfLoginButton"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="#34ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Enter Your Password"
+            android:textColorHint="@color/colorAccent"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_marginStart="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="176dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Username/E-mail"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:textColorHint="@color/colorAccent"
+            android:layout_alignBottom="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_marginBottom="55dp" />
+
+        <Button
+                android:text="Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register"
+                android:onClick="onClickOfRegisterButton"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="143dp" />
+
+        <TextView
+                android:text="Not Registered?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginStart="21dp"
+                android:textColor="@color/colorAccent"
+
+            android:layout_alignBaseline="@+id/register"
+            android:layout_alignBottom="@+id/register"
+            android:layout_alignStart="@+id/editText2" />
+    </RelativeLayout>
+</RelativeLayout>
+
