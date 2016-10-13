@@ -1,0 +1,15 @@
+{
+    "jscodehints.detectedExclusions": [
+        "G:/Assistantship/ASE/Tutorials/Tutorial 7/Tutorial 7/ImageApp/www/js/firebase.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/log.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/pluginHandlers.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/prepare.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/builders/builders.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/builders/GenericBuilder.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/builders/GradleBuilder.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/check_reqs.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/device.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/emulator.js",
+        "/Users/NSB/Desktop/Sem-I/ASE/ImageApp/platforms/android/cordova/lib/retry.js"
+    ]
+}
