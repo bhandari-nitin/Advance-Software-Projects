@@ -43,15 +43,15 @@ function ($scope, $stateParams, $http) {
     $scope.image = function(){
         
         var item1 = $scope.formData.item;
-        var handler = $http.get("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=5b2d458173378211d409a9f35d79c77d&text="+item1+"&per_page=1&format=json&nojsoncallback=1");
+        var handler = $http.get("http://localhost:8080/Assignment8/restexample/flickrapi/laptop");
         handler.success(function(data){
             
         if(data!=null){
             console.log(data);
-            var farm1 = data.photos.photo[0].farm;
-            var id1 = data.photos.photo[0].id;
-            var secret1 = data.photos.photo[0].secret;
-            var server1 = data.photos.photo[0].server;
+            var farm1 = data.farm;
+            var id1 = data.id;
+            var secret1 = data.secret;
+            var server1 = data.server;
             $scope.image = "https://farm"+farm1+".staticflickr.com/"+server1+"/"+id1+"_"+secret1+"_m.jpg";
             $scope.wallmart();
         }
@@ -61,23 +61,20 @@ function ($scope, $stateParams, $http) {
             alert("There was an error processing your request");
         })
     }
-    
+    var item1 = $scope.formData.item;
     $scope.wallmart = function(){
         console.log("hey");
           var item1 = $scope.formData.item; 
     
-        var handler = $http.get("http://api.walmartlabs.com/v1/search?query="+item1+"&format=json&apiKey=xpcqmfg6p8tk5dk658nz6q2n&numItems=1&sort=bestseller");
+        var handler = $http.get("http://localhost:8080/Assignment8/restexample/flickrapi/"+item1);
                 
                 handler.success(function(data){
                     if(data!=null)
                         {
                             console.log(data);    
-                             $scope.id2 = data.items[0].itemId;
-                            $scope.name2 = data.items[0].name;
-                            $scope.price2 = data.items[0].salePrice;
-                            
-                        
-                    
+                             $scope.id2 = data.itemId;
+                            $scope.name2 = data.name;
+                            $scope.price2 = data.price;
                         }
                     
                 })
