@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Rest" ng-controller="Restctrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Update & Delete</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+
+        .table-bordered {
+            border: 1px solid #dddddd;
+            border-collapse: separate;
+            border-left: 0;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        body{
+
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-color: paleturquoise;
+            background-image: url(/images/bg.jpg);
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: table;
+        }
+
+        .widget.widget-table .table {
+            margin-bottom: 0;
+            border: none;
+        }
+
+        .widget.widget-table .widget-content {
+            padding: 0;
+        }
+
+        .widget .widget-header + .widget-content {
+            border-top: none;
+            -webkit-border-top-left-radius: 0;
+            -webkit-border-top-right-radius: 0;
+            -moz-border-radius-topleft: 0;
+            -moz-border-radius-topright: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .widget .widget-content {
+            padding: 20px 15px 15px;
+            background: #FFF;
+            border: 1px solid #D5D5D5;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .widget .widget-header {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            background: #E9E9E9;
+            background: -moz-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #e9e9e9));
+            background: -webkit-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+            background: -o-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+            background: -ms-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+            background: linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+            text-shadow: 0 1px 0 #fff;
+            border-radius: 5px 5px 0 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1),inset 0 1px 0 white,inset 0 -1px 0 rgba(255,255,255,0.7);
+            border-bottom: 1px solid #bababa;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+            border: 1px solid #D5D5D5;
+            -webkit-border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            -webkit-background-clip: padding-box;
+        }
+
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        tbody{
+            vertical-align: middle;
+            border-color: inherit;
+            display: table-header-group;
+        }
+
+        .widget .widget-header h1 {
+            top: 2px;
+            position: relative;
+            left: 10px;
+            display: inline-block;
+            margin-right: 3em;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3414f7;
+            text-align: center;
+            line-height: 18px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+
+        .widget .widget-header [class^="icon-"], .widget .widget-header [class*=" icon-"] {
+            display: inline-block;
+            margin-left: 13px;
+            margin-right: -2px;
+            font-size: 16px;
+            color: #fd2dff;
+            vertical-align: middle;
+        }
+        .goButton{
+            background: #0defec;
+            width: 20%;
+            padding: 1px;
+            font-size: 0.8em;
+            letter-spacing:1px;
+            color: #fff;
+            margin: 1px 0 1px;
+        }
+        h1{
+            alignment: center;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="wrap" style="width:80%;">
+    <div class="span7">
+        <div class="widget stacked widget-table action-table">
+
+            <div class="widget-header">
+                <i class="icon-th-list"></i>
+                <h1 style="text-align: center">List Of Users</h1>
+            </div> <!-- /widget-header -->
+
+            <div class="widget-content">
+                <br>
+                <br>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th style="text-align: left">Username</th>
+                        <th style="text-align: left">Password</th>
+                        <th style="text-align: left">Update/Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="users">
+                        <td><input ng-change="edit(users)" type='text' ng-model='users.username'></td>
+                        <td><input ng-change="edit(users)" type='text' ng-model='users.password'></td>
+                        <td>
+                            <button class="goButton" ng-click="update(users)">Update</button>
+                            <button class="goButton" ng-click="delete(users._id)">Delete</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <button onclick=window.location.href="signup.html" class="goButton" style="background: #d3213c;
+		width: 100%;
+		padding: 2px;
+		font-size: 1.3em;
+		letter-spacing:1px;
+		color: #fff;
+		margin: 10px 0 10px;">Add a new user</button>
+            </div> <!-- /widget-content -->
+
+        </div> <!-- /widget -->
+    </div>
+<script src="js/updatedelete.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>
