@@ -10,4 +10,4 @@
 **Lab 7 =**https://github.com/nsb007/Lab_Assignments_ASE/wiki/Lab7<br />
 **Lab 8 =**https://github.com/nsb007/Lab_Assignments_ASE/wiki/Lab-8<br />
 **Lab 9 =**https://github.com/nsb007/Lab_Assignments_ASE/wiki/Lab-9<br />
-**Lab 10=**<br />
+**Lab 10=**https://github.com/nsb007/Lab_Assignments_ASE/wiki/Lab-10<br />
