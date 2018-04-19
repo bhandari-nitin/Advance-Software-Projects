@@ -1,6 +1,6 @@
 ## Advance Software Engineering Projects
 
-### This repository conatins various projects on advance technologies used in  software engineer practices, software architecture and design, comparative analysis for design, object-oriented software design, software quality criteria for evaluation of software design. 
+This repository conatins various projects on advance technologies used in  software engineer practices, software architecture and design, comparative analysis for design, object-oriented software design, software quality criteria for evaluation of software design. 
 
 ### Prerequisites
 
@@ -38,4 +38,4 @@
 
 ## Acknowledgements
 
-Advance Software Engineering Course 
+- Advance Software Engineering Course 
