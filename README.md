@@ -26,7 +26,7 @@ This repository conatins various projects on advance technologies used in  softw
 ```
 
 **Project 1**: [Project Management](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-1)<br />
-**Project 2**: [Wireframses and Web Application](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-2)<br />
+**Project 2**: [Wireframes and Web Application](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-2)<br />
 **Project 3**: [Web Application using API's](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-3)<br />
 **Project 4**: [Weather App using Android Studio](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-4)<br />
 **Project 5**: [Application using Ionic Framework](https://github.com/nsb007/Lab_Assignments_ASE/wiki/Project-5)<br />
